@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+       
+        <!-------------------------------------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        <!----------------------------------------------------Bootstrap--------------------------------------------------------------->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <!-------------------------------------------------------------------------------------------------------------------------->
+        <style>
+            .navbar{
+                background-color : #130f40;
+                
+            }
+            .nav-item{
+                font-size : 16px;
+            }
+            div.ex3 {
+                width: 100%;
+                height: 100%;
+                overflow:auto;
+                }
+        </style>
+</head>
+<body>
+<nav class="navbar  navbar-expand-lg navbar-dark" >
+    <a class="navbar-brand" href="#">
+        <img src="logotm.jpg" width="100" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        
+        </span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav  ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Business Plan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sare Loan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Business Sell/Buy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Business</a>
+                                </li>
+                                </ul>     
+  </div>
+</nav>
+
+
+
+<article>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-8">
+  <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Business Plan Analyzer</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-comp" role="tab" aria-controls="nav-profile" aria-selected="false">Company Info</a>
+                      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-past" role="tab" aria-controls="nav-contact" aria-selected="false">Past Performance</a>
+                      <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-owner" role="tab" aria-controls="nav-about" aria-selected="false">Owner Info</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <center>
+                                    <label style="margin-top : 10%;"><h1>Smart</h1> <h2>Business Plan</h2></label>
+                                    <br/><br/>
+                                    <input type="button" class="btn btn-success" name="createone" value="Create One Business Plan !!!" />
+                                    </center>
+                         </div>
+                    <div class="tab-pane fade" id="nav-past" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h4>Past Performance</h4>
+
+                            <form method="POST" action="pastpro.php">
+                                <h4>Basic Information Previous Year - 2017</h4>        
+                                <label for="revenue">Revenue</label>  <input type ="number" class="form-control" id="revenue"  onchange="myFunction()" /> 
+                                <label for="profit"> Net-Profit</label>  <input type ="number" class="form-control" id="profit" onchange="myFunction()"/>
+                                <label for="balance">Cash-Balance</label>  <input type ="number" class="form-control" id="balance" onchange="myFunction()"/>
+                                <label for="debt"> Debt</label>  <input type ="number" class="form-control" id="debt" onchange="myFunction()"/>        
+                                
+                                <h4>Basic Information Previous Year - 2018</h4>        
+                                <label for="revenue"> Revenue</label> <input type ="number" class="form-control" id="revenueo" onchange="myFunction1()" />
+                                <label for="profit">Net-Profit</label> <input type ="number" class="form-control" id="profito" onchange="myFunction1()" />
+                                <label for="balance">Cash-Balance</label> <input type ="number" class="form-control" id="balanceo" onchange="myFunction1()" />
+                                <label for="debt">Debt</label> <input type ="number" class="form-control" id="debto" onchange="myFunction1()" />        
+                                <input type="submit" class="btn btn-info" name="submit"value="save"/>
+                            </form>
+                            </div>
+    <script>
+        function myFunction(){    
+    
+    /**************************************************************************** */   
+            var revenue=document.getElementById('revenue').value;  
+           var profit=document.getElementById('profit').value;  
+           var balance=document.getElementById('balance').value;    
+           var debt=document.getElementById('debt').value;      
+    
+            var chart = new CanvasJS.Chart("chartContainer",{
+            title:{
+                text: "Year-2017"
+            },
+            legend: {
+                maxWidth: 220,
+                itemWidth: 60
+            },
+            data: [
+            {
+                type: "pie",
+                showInLegend: true,
+                legendText: "{indexLabel}",
+                dataPoints: [
+                    { y: revenue, indexLabel: "Revenue" },
+                    { y: profit, indexLabel: "Net-Profit" },
+                    { y: balance, indexLabel: "Cash-Balance" },
+                    { y: debt, indexLabel: "Debt"},
+                    ]
+            }
+            ]	});
+            chart.render(); 
+        }
+       function myFunction1(){   
+    /*<------------------------------------------------------------------->*/
+    var revenueo=document.getElementById('revenueo').value;    
+           var profito=document.getElementById('profito').value;    
+           var balanceo=document.getElementById('balanceo').value;     
+           var debto=document.getElementById('debto').value;   
+    var chart1 = new CanvasJS.Chart("chartContainer1",{
+            title:{
+                text: "Year-2018"
+            },
+            legend: {
+                maxWidth: 220,
+                itemWidth: 60
+            },
+            data: [
+            {
+                type: "pie",
+                showInLegend: true,
+                legendText: "{indexLabel}",
+                dataPoints: [
+                    { y: revenueo, indexLabel: "Revenue" },
+                    { y: profito, indexLabel: "Net-Profit" },
+                    { y: balanceo, indexLabel: "Cash-Balance" },
+                    { y: debto, indexLabel: "Debt"},
+                    ]
+            }
+            ]	});
+          
+        chart1.render(); 
+           
+               }    
+         </script>
+                                                
+                       
+                    <div class="tab-pane fade" id="nav-comp" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                    <form method="POST" enctype="multipart/form-data">
+                    <h4>Company Information</h4>
+                    <div class="form-group col-md-12">
+                    <label> Company Name </label><input id="cname"  class="form-control"  onchange="comname()" placeholder="Enter Your Company" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                    <label>Company Address</label><textarea Placeholder="Enter Address"  onchange="comaddr()" class="form-control" id="addr1" required></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                    <label>Date of Establishment</label><input type="date" class="form-control"  onchange="comdte()" id="cdate" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                    <label>Company Icon</label>
+                    <input type="file" class="form-control" id="cicon" name="cicon" onchange="comicon()">
+                    </div>
+                    <input type="submit" class="btn btn-info" name="submit"value="save"/>
+                    </form>
+                       </div>
+                    <div class="tab-pane fade" id="nav-owner" role="tabpanel" aria-labelledby="nav-about-tab">
+
+                                <form method="POST" action="bplanprocess.php">
+                                <h4>Owners Information</h4>
+                                <div class="form row">
+                                <div class="form-group col-md-6">
+                                <label for="fname">First Name</label>
+                                <input type="text" class="form-control" id="fname" onchange="firstname()"placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control" id="lname" onchange="lastname()" name="lname"placeholder="Last Name">
+                                </div>
+                                </div>
+                                <div class="form-row">
+                                <div class="form-group col-md-12">
+                                <label for="inputAddress">Address</label>
+                                <textarea class="form-control" rows="3" id="inputAddress" onchange="address()" placeholder="Room No, Street Lane, Area,City ,State"></textarea>
+                                </div>
+                                </div>  
+
+                                <div class="form-row">
+                                <div class="form-group col-md-6">
+                                <label for="education">Highest Qualification</label>
+                                <select class="form-control" id="education" onchange="edu()">
+                                <option>--Select--</option>
+                                <option>Post-Graduate</option>
+                                <option>Graduate</option>
+                                <option>BSC</option>
+                                <option>HSC</option>
+                                <option>SSC</option>
+                                <option>Below SSC</option>
+                                <option>other</option>
+                                </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                <label class="control-label" for="sdate">Start Date Of Business</label>
+                                <input class="form-control"  id="sdate" onchange="dates()" type="date"/>
+                                </div>
+                                </div>
+                                <div class="form-row">
+                                <div class="form-group col-md-12">
+                                <label for="inputSummary">Summary</label>
+                                <textarea class="form-control" rows="3" id="inputSummary" onchange="summary()" placeholder="Summary about the Owner"></textarea>
+                                </div>
+                                </div>       
+                                <input type="submit" class="btn btn-info" name="submit"value="save"/>
+                                </form>   
+                       </div>
+                  </div>
+</div>
+
+<div class="col-sm-4" >
+
+<div class="container">
+<div class="ex3">
+<center><h2>Report Preview</h2></center>
+                <div class="form-row"  >
+                
+                        <div id="chartContainer" style="height: 50%; width: 50%;"></div>
+                
+                        <div id="chartContainer1" style="height: 50%; width: 50%;"></div>
+               
+                </div>
+            <div class="form-row" style="margin-top:400px;">
+                 <div class="form-group  col-md-8">
+                <h2><label id="compname" name="cname"></label></h2>
+                </div>
+                <div class="form-group col-md-8 ">
+                <label id="compaddr" name="caddr"></label>
+                </div>
+                <div class="form-group col-md-8 ">
+                <label id="compest" name="cest"></label> 
+                </div>
+                <div class="form-group col-md-8">
+                <img id="imgsrc" name="imgsrc" src="" height="120" />
+                </div>
+            </div>
+            <div class="form-row" style="margin-top:10px;">
+            <div class="form-group  col-md-8">
+                 <label id="first" name="first"></label> 
+                <label id="second" name="second"></label> 
+                </div>
+                <div class="form-group  col-md-8">
+                <label id="addr" name="addr"></label> 
+                </div>
+                <div class="form-group  col-md-8">
+                <label id="educ" name="educ"></label>
+                </div>
+                <div class="form-group  col-md-8"> 
+                <label id="startdate" name="startdate"></label> 
+                </div>
+                <div class="form-group  col-md-8">
+                <label id="summary" name="summary"></label>
+                </div>
+            </div>
+
+         </div>
+        </div>
+
+</div>
+
+</article>
+
+<footer>
+
+</footer>
+
+<script type="text/javascript">
+  function firstname(){
+    var fname = document.getElementById("fname"); 
+    document.getElementById("first").innerHTML =""+fname.value;   
+   
+  }
+  function lastname(){
+    var lname = document.getElementById("lname");
+    document.getElementById("second").innerHTML =""+lname.value;
+    
+  }
+  function address(){
+    var addr = document.getElementById("inputAddress");
+    document.getElementById("addr").innerHTML = ""+addr.value;
+    
+  }
+  function edu(){
+    var educ = document.getElementById("education");
+    document.getElementById("educ").innerHTML = "Qualification: "+educ.value;
+  
+  }
+  function dates(){
+    var strtdate = document.getElementById("sdate");
+    document.getElementById("startdate").innerHTML = "Start Date of Business: "+strtdate.value;
+    
+  }
+  function summary(){
+    var summ = document.getElementById("inputSummary");
+    document.getElementById("summary").innerHTML = "About Owner: "+summ.value;
+   
+  }
+</script>
+<script type="text/javascript">
+$('.menu .item')
+  .tab()
+;
+</script>
+ <script type="text/javascript">
+  function comname(){
+    var compname = document.getElementById("cname"); 
+    document.getElementById("compname").innerHTML =""+compname.value;  
+    
+  }
+  function comaddr(){
+    var caddr = document.getElementById("addr1");
+    document.getElementById("compaddr").innerHTML =""+caddr.value;
+   
+  }
+  function comdte(){
+    var compest = document.getElementById("cdate");
+    document.getElementById("compest").innerHTML = ""+compest.value;
+  }
+  function comicon(){
+                 
+               var preview = document.querySelector('#imgsrc');
+               var file = document.querySelector('input[type=file]').files[0];
+               var reader = new FileReader();
+               reader.onloadend = function(){
+                   preview.src = reader.result;
+                }               
+                if(file){
+                    reader.readAsDataURL(file);
+                  
+                }else{
+                    preview.src="";
+                }          
+               
+
+
+  }
+  </script>
+
+</body>
+</html>
